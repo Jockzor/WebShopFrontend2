@@ -1,24 +1,102 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
-body {
+*{
+  border: 0;
+  padding: 0;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
+
+/* -----MAIN NAVIGATION BAR----- */
+
+.header-desktop{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: space-evenly;
+  padding: 20px;
+  background-color: #27282c;
+  color: white;
+  font-family: monospace;
+  height: 60px;
+  border: 1px rgb(189, 189, 189);
+  border-bottom: solid;
+  }
+  
+  .left{
+    display: flex;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  
+  .mainMenu{
+    margin: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .right{
+  display:flex;
+  text-align: right;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  }
+  
+  .menuItem{
+    margin: 10px;
+    display: inline-block;
+    position: relative;
+    color: orangered;
+  }
+  
+  .menuItem::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: orangered;
+    transition: transform 0.4s ease-out;
+  }
+  
+  .menuItem:hover::after{
+  transform: scaleX(1);
+  }
+  
+  .icon{
+    margin: 5px;
+  }
+  
+  .icon:hover{
+    color: rgb(189, 189, 189);
+    cursor: pointer;
+  }
+  
+  #sale{
+    color: orangered;
+  }
+  
+  #quantity{
+    display: flex;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    background-color: #08b87e;
+    border-radius: 100%;
+    font-size: .75rem;
+    margin: 0;
+  }
+  
+  #shoppingBasket{
+    margin-right: 0;
+  }
+  
+  a{
+    text-decoration: none;
+    color: white;
+  }
 
