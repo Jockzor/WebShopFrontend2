@@ -3,6 +3,23 @@
   padding: 0;
   margin: 0;
 }
+/* --- Footer ---*/
+
+
+
+  
+  .footerBox {
+    background-color:#27282c;
+    color: #fff; /* Set the text color */
+    padding: 10px; /* Add padding to the footer */
+    text-align: center; /* Center the text */
+    position: fixed; /* Fixed position at the bottom */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width */
+  }
+
+
 
 /* -----MAIN NAVIGATION BAR----- */
 
@@ -28,14 +45,6 @@
   }
   
   
-  .mainMenu{
-    margin: 0 3rem;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.2rem;
-    font-weight: 500;
-  }
-  
   .right{
   display:flex;
   text-align: right;
@@ -43,6 +52,14 @@
   font-size: 1.2rem;
   }
   
+  .mainMenu{
+    margin: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
   .menuItem{
     margin: 10px;
     display: inline-block;
