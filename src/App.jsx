@@ -1,23 +1,27 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 import './App.css'
+import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
 
 
 function App() {
   
 
   return (
-    <div className='mainContainer'>
-      <NavBar/>
-      
-    </div>
-    /*<Router>
+    
+    <BrowserRouter>
+        <NavBar/> 
       <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route/>
       </Routes>
-    </Router>
-    */
+       <Footer/>
+    </BrowserRouter>
+    
       
   )
 }

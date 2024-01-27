@@ -1,6 +1,10 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+.footerBox {
+    background-color:#27282c;
+    color: #fff; /* Set the text color */
+    padding: 10px; /* Add padding to the footer */
+    text-align: center; /* Center the text */
+    position: fixed; /* Fixed position at the bottom */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width */
+  }
