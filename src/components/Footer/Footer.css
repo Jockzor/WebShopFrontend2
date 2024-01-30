@@ -1,0 +1,59 @@
+.footerBox {
+    background-color:#27282c;
+    color: #fff; /* Set the text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+     
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width */
+   
+    
+  }
+
+  .top{
+    display: flex;
+   
+    gap: 100px;
+  }
+
+  .bottom{
+    margin-top: 30px;
+  }
+
+  .item{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+
+    span:hover{
+        cursor: pointer;
+        color: gray;
+    }
+  }
+  
+  .links:hover{
+    cursor: pointer;
+    color: gray;
+  }
+
+  
+  #facebook{
+    font-size: 30px
+  }
+  #facebook:hover{
+    cursor: pointer;
+    color: rgb(15, 79, 151);
+    transition: .5s;
+  }
+  #instagram{
+    font-size: 30px;
+  }
+  #instagram:hover{
+    cursor: pointer;
+    color: rgb(15, 79, 151);
+    transition: .5s;
+  }
