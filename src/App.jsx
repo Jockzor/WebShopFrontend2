@@ -5,6 +5,8 @@ import Footer from './components/Footer'
 import './App.css'
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
+import Cart from "./pages/Cart";
+import { ShopContextProvider } from './components/ShopContext';
 
 
 function App() {
@@ -14,16 +16,21 @@ function App() {
     
     <BrowserRouter>
         <NavBar/> 
+        <ShopContextProvider>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/cart" element={<Cart />} /> 
         <Route/>
       </Routes>
+      </ShopContextProvider>
        <Footer/>
     </BrowserRouter>
     
       
   )
 }
+
+
 
 export default App

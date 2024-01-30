@@ -17,13 +17,13 @@ const NavBar = () => {
               <Link to="shop">Shop</Link>
             </div>
             <div className='menuItem'>
-              <Link to="/bestsellers">Bästsäljare</Link>
+              <Link to="/bestsellers">Jackor</Link>
             </div>
             <div className='menuItem'>
-              <Link to="/about">Om Oss</Link>
+              <Link to="/about">Hoodies</Link>
             </div>
             <div className='menuItem'>
-              <Link to="/sale" id='sale'>Rea</Link>
+              <Link to="/sale" id='sale'>Skor</Link>
             </div>
           </div>
           <div className='right'>
@@ -36,14 +36,14 @@ const NavBar = () => {
             <Link className='icon' to="/wishlist">
               <FaRegHeart />
             </Link>
-            <div className='icon' id='shoppingBasket'>
+            <Link className='icon' to='/Cart'>
               <FaBasketShopping />
+            </Link>
             </div>
             <div className='icon' id='quantity'>
               <span>0</span>
             </div>
           </div>
-        </div>
         <Outlet />
       </>
     )
