@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import "/src/components/NavBar/NavBar.css"
 import { Outlet, Link } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { IoSearch } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 import { FaBasketShopping } from "react-icons/fa6";
+
 
 const NavBar = () => {
     return(
@@ -14,16 +16,16 @@ const NavBar = () => {
           </div>
           <div className='mainMenu'>
             <div className='menuItem'>
-              <Link to="shop">Shop</Link>
+              <Link to="/shop">Shop</Link>
             </div>
             <div className='menuItem'>
-              <Link to="/bestsellers">Bästsäljare</Link>
+              <Link to="/jackor">Jackor</Link>
             </div>
             <div className='menuItem'>
-              <Link to="/about">Om Oss</Link>
+              <Link to="/hoodies">Hoodies</Link>
             </div>
             <div className='menuItem'>
-              <Link to="/sale" id='sale'>Rea</Link>
+              <Link to="/tshirts">T-Shirts</Link>
             </div>
           </div>
           <div className='right'>
