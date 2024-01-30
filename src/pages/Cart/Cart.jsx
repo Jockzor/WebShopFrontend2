@@ -89,9 +89,9 @@ const Cart = () => {
     </>
   );
 };
-
+/*
 Cart.propTypes = {
   cartItems: PropTypes.array,
 };
-
+*/
 export default Cart;

@@ -3,11 +3,11 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 100px;
-    
+    padding: 50px 100px 100px 100px;
 }
 
 .product-item{
-    
+    font-size: 17px;
 }
 
 img{
