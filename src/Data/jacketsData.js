@@ -13,8 +13,8 @@ export const jacketsData = [
         img: "https://thumbs.dreamstime.com/z/blue-rain-jacket-15571285.jpg?ct=jpeg",
         title: "Blå Jacka",
         description: "Regnjacka",
-        quantity: "50",
-        price: "999"
+        quantity: "29",
+        price: "1199"
     },
     {
         id:3,
