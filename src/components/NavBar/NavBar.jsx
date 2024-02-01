@@ -1,9 +1,6 @@
 import React from 'react';
 import "/src/components/NavBar/NavBar.css"
 import { Outlet, Link } from "react-router-dom";
-import { CgProfile } from "react-icons/cg";
-import { IoSearch } from "react-icons/io5";
-import { FaRegHeart } from "react-icons/fa";
 import { FaBasketShopping } from "react-icons/fa6";
 
 
@@ -15,9 +12,6 @@ const NavBar = () => {
             <Link to="/">Myrorna 2.0</Link>
           </div>
           <div className='mainMenu'>
-            <div className='menuItem'>
-              <Link to="/shop">Shop</Link>
-            </div>
             <div className='menuItem'>
               <Link to="/jackets">Jackor</Link>
             </div>

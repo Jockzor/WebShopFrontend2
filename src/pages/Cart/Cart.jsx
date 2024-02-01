@@ -1,97 +1,35 @@
 import React, { useContext } from 'react';
 import { ShopContext } from '../../components/ShopContext';
+import { CartItem } from './Cart-item';
+import {} from 'react-router-dom'
 
-const Cart = () => {
-  const {
-    cartItems,
-    clearCart,
-    increaseQuantity,
-    reduceQuantity,
-    setCartItems,
-  } = useContext(ShopContext);
+import { useNavigate } from 'react-router-dom';
 
-  const handleDelete = (productId) => {
-    const updatedCart = cartItems.filter(
-      (item) => item.product.id !== productId
-    );
-    setCartItems(updatedCart);
-  };
+export const Cart = () => {
+  const { cartItems, getTotalCartAmount } = useContext(ShopContext); 
+  const totalAmount = getTotalCartAmount()
 
-  const handleIncreaseQuantity = (productId) => {
-    increaseQuantity(productId);
-  };
-
-  const handleReduceQuantity = (productId) => {
-    reduceQuantity(productId);
-  };
-
-  const totalPrice = useMemo(() => {
-    return cartItems.reduce((total, item) => {
-      return total + item.product.price * item.quantity;
-    }, 0);
-  }, [cartItems]);
+  const navigate = useNavigate()
 
   return (
-    <>
-      <div className="cart-wrapper">
-        <h2>Your Cart</h2>
-        {cartItems.length > 0 ? (
-          <div className="cart | flow">
-            <div className="cart-items-wrapper">
-              {cartItems.map((item) => (
-                <div key={item.product.id} className="flow | cart-items">
-                  <div className="blur-load">
-                    <img
-                      loading="lazy"
-                      src={item.product.image}
-                      alt={item.product.title}
-                      className="rounded-image"
-                    />
-                  </div>
-                  <p className="spacer">{item.product.title}</p>
-                  <p className="spacer">Price: {item.product.price}</p>
-                  <p className="spacer">Quantity: {item.quantity}</p>
-                  <p className="spacer">
-                    Subtotal: {Math.floor(item.product.price * item.quantity)}
-                  </p>
-
-                  <div className="action-buttons | spacer">
-                    <button
-                      onClick={() => handleIncreaseQuantity(item.product.id)}
-                    >
-                      +
-                    </button>
-                    <button
-                      onClick={() => handleReduceQuantity(item.product.id)}
-                    >
-                      -
-                    </button>
-
-                    <button onClick={() => handleDelete(item.product.id)}>
-                      Delete
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="total">
-              <p>Total: {Math.floor(totalPrice)}</p>
-              <button onClick={clearCart} className="clear">
-                Clear Cart
-              </button>
-            </div>
-          </div>
-        ) : (
-          <p>Your cart is empty</p>
-        )}
+    <div className='cart'>
+      <div>
+        <h1> Kundkorg </h1>
       </div>
-    </>
-  );
+      <div className='cartItems'>
+        {PRODUCTS.map((product) => {
+            if (cartItems[product.id] !== 0) {
+               return <CartItem data={product} />; 
+            }
+        })}
+
+      </div>
+
+      <div className="checkOut">
+        <p> Totalbelopp: ${totalAmount}</p>
+        <button onClick={() => navigate("/")}> Fortsätt handla </button>
+      </div>
+
+    </div>
+  )
 };
-/*
-Cart.propTypes = {
-  cartItems: PropTypes.array,
-};
-*/
-export default Cart;

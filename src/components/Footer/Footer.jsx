@@ -11,14 +11,14 @@ const Footer = () => {
             <div className ='footerBox'>
                 <div className='top'>
                     <div className='item'>
-                        <h3>Länkar</h3>
+                        <h3>Länkar</h3><u/>
                         <Link className ="links" to="/about">Om Oss</Link>
                         <span>Leverans</span>
                         <span>Köpvillkor</span>
                         <span>Byten och Returer</span>
                     </div>
                     <div className='item'>
-                        <h3>Följ Oss</h3>
+                        <h3>Följ Oss</h3><u />
                         <FaFacebook id='facebook'/>
                         <FaInstagramSquare id='instagram'/>
                     </div>

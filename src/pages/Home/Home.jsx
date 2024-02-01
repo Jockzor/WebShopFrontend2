@@ -3,6 +3,7 @@ import "/src/pages/Home/Home.css"
 import Hoodie from "/src/assets/images/hoodie-slider.jpg"
 import Products from '/src/components/Products/Products.jsx';
 
+
 const Home = () => {
   return (
     <div className='slider'>
