@@ -6,7 +6,7 @@ const Hoodies = () => {
     return (
       <div>
         <h2>Hoodies</h2>
-        <Products data={hoodiesData} />
+        <Products data={hoodiesData} category="hoodies" />
       </div>
     );
   };

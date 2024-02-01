@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import "/src/components/Products/Products.css"
 import Product from '/src/components/Product/Product.jsx';
 
-const Products = ({ data }) => {
+const Products = ({ data, category }) => {
     return (
       <div className="products-container">
         {data?.map((product) => (
           <div key={product.id} className="product-item">
-            <Link to={`/product/${product.id}`}>
+            <Link to={`/${category}/product/${product.id}`}>
               <img src={product.img} alt={product.title} />
               <h3>{product.title}</h3>
             </Link>

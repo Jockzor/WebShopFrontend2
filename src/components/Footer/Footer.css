@@ -1,6 +1,6 @@
 .footerBox {
     background-color:#27282c;
-    color: #fff; /* Set the text color */
+    color: #fff; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,7 +8,7 @@
      
     left: 0;
     bottom: 0;
-    width: 100%; /* Full width */
+    width: 100%; 
    
     
   }

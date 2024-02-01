@@ -7,7 +7,7 @@ const TShirts = () => {
     return (
       <div>
         <h2>T-Shirts</h2>
-        <Products data={tshirtsData} />
+        <Products data={tshirtsData} category="tshirts" />
       </div>
     );
   };

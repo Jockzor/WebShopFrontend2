@@ -3,7 +3,7 @@ import '/src/components/ProductDetails/ProductDetails.css'
 import { FaBasketShopping } from "react-icons/fa6";
 
 const ProductDetails = ({ product }) => {
-    console.log('Product in ProductDetails component:', product);
+   
   return (
     <div className='detailsContainer'>
       <div className='left'>

@@ -7,7 +7,7 @@ const Jackets = () => {
     return (
       <div>
         <h2>Jackets</h2>
-        <Products data={jacketsData} />
+        <Products data={jacketsData} category="jackets" />
       </div>
     );
   };
