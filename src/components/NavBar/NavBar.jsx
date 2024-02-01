@@ -29,7 +29,7 @@ const NavBar = () => {
             </div>
           </div>
           <div className='Cart'>
-            <Link className='icon' to='/cart'>
+            <Link className='icon' id='shoppingBasket' to='/cart'>
               <FaBasketShopping />
             </Link>
             </div>

@@ -61,7 +61,8 @@
     }
     
     .icon{
-      margin: 15px;
+      margin: 6px;
+      font-size: 20px;
     }
     
     .icon:hover{
@@ -78,7 +79,7 @@
       padding: 0;
       background-color: #08b87e;
       border-radius: 100%;
-      font-size: .75rem;
+      font-size: 0.75rem;
       margin: 0;
     }
     
