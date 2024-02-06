@@ -13,12 +13,9 @@ const Footer = () => {
                     <div className='item'>
                         <h3>Länkar</h3><u/>
                         <Link className ="links" to="/about">Om Oss</Link>
-                        <span>Leverans</span>
-                        <span>Köpvillkor</span>
-                        <span>Byten och Returer</span>
-                    </div>
-                    <div className='item'>
-                        <h3>Följ Oss</h3><u />
+                        <Link className ="links" to="/delivery">Leverans</Link>
+                        <Link className="links" to="/purchase">Köpvillkor</Link>
+                        <Link className="links" to="/returns">Byten och Returer</Link>
                         <FaFacebook id='facebook'/>
                         <FaInstagramSquare id='instagram'/>
                     </div>
