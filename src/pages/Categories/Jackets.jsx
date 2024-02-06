@@ -2,12 +2,13 @@ import React from 'react';
 
 import { jacketsData } from "/src/Data/jacketsData.js"
 import Products from '../../components/Products/Products';
+import {fetchProductsByCategory} from '/src/Services/Api.js';
 
 const Jackets = () => {
     return (
       <div>
         <h2>Jackets</h2>
-        <Products data={jacketsData} category="jackets" />
+        <Products data={fetchProductsByCategory()} category="jackets" />
       </div>
     );
   };
