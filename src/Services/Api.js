@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'http://localhost:1337'; 
+const baseURL = 'http://localhost:1337/api'; 
 
 const api = axios.create({
   baseURL,
@@ -20,7 +20,8 @@ setAuthToken('15c40308160488fe98169f3e1cbcd72ccfee40c1c305947a609a7b0536fed21146
 
 export const fetchProductsByCategory = async (category) => {
   try {
-    const response = await api.get(`/products`);
+    const response = await api.get(`/products/4`);
+    console.log(response.data)
     return response.data;
   } catch (error) {
     console.error('Error fetching products:', error);
