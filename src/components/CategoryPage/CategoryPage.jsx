@@ -12,7 +12,7 @@ const CategoryPage = ({ categoryId }) => {
     const fetchData = async () => {
       try {
         const data = await fetchProductsByCategory(categoryId);
-        setProducts(data.data);
+        setProducts(data.data.attributes.products.data);
       } catch (error) {
         console.error('Error fetching products:', error);
       }

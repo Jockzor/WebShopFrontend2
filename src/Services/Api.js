@@ -21,7 +21,7 @@ setAuthToken('0887eab43f58ae36994553a002b01f96a12be26d349d8ad05ee4956f407524d4cc
 
 export const fetchProductsByCategory = async (categoryId) => {
   try {
-    const response = await api.get(`/products?populate=*`);
+    const response = await api.get(`categories/${categoryId}?populate=products.image`);
     console.log(response.data)
     return response.data;
   } catch (error) {

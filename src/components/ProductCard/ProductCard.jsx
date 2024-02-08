@@ -8,10 +8,10 @@ const ProductCard = ({ id, title, image, description, price, quantity }) => {
       
       <img src={image} alt={title} /> 
       <h3>{title}</h3>
-      <p>{description}</p>
+      <p className="description">{description}</p>
       <p>Pris: SEK {price}</p>
       <p>Lager: {quantity}</p>
-      <Link className='detailLink' to={`/product/${id}`}>View Details</Link>
+      <Link className='detailLink' to={`/product/${id}`}>Se Detaljer</Link>
     </div>
   );
 };
