@@ -10,16 +10,17 @@ import Delivery from "./pages/DeliveryPage/Delivery.jsx"
 import Jackets from './pages/Categories/Jackets';
 import Hoodies from './pages/Categories/Hoodies';
 import TShirts from './pages/Categories/Tshirts';
-import ProductDetailsPage from './pages/ProductDetailsPage/ProductDetailsPage.jsx';
 import { ShopContextProvider } from './components/ShopContext';
 import PurchaseTerm from './pages/PurchaseTerms/PurchaseTerms.jsx';
+import CategoryPage from '/src/components/CategoryPage/CategoryPage.jsx';
+import ProductDetails1 from './components/ProductDetails/ProductDetails1.jsx';
 
 function App() {
 
   fetch("").then
 
   return (
-    
+    //<ShopContextProvider>
     <BrowserRouter>
         <NavBar/> 
       <Routes>
@@ -29,17 +30,20 @@ function App() {
         <Route path="/returns" element={<Returns />}/>
         <Route path="/delivery" element={<Delivery />}/>
         <Route path="/purchase" element={<PurchaseTerm />}/>
-        <Route path="/jackets" element={<Jackets/>}/>
-        <Route path="/hoodies" element={<Hoodies/>}/>
-        <Route path="/tshirts" element={<TShirts/>}/>
-        <Route path="/:category/product/:productId" element={<ProductDetailsPage />} />
+      
+        <Route path="/jackets" element={<CategoryPage categoryId="1" />} />
+        <Route path="/hoodies" element={<CategoryPage categoryId="2" />} />
+        <Route path="/tshirts" element={<CategoryPage categoryId="3" />} />
+        <Route path="/product/:productId" element={<ProductDetails1/>} />
+
+        
         <Route/>
       </Routes>
       
       
        <Footer/>
     </BrowserRouter>
-    
+   // </ShopContextProvider>
       
   )
 }
