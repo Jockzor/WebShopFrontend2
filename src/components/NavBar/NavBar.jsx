@@ -22,6 +22,7 @@ const NavBar = () => {
               <Link to="/tshirts">T-Shirts</Link>
             </div>
           </div>
+          <div className='right'>
           <div className='Cart'>
             <Link className='icon' id='shoppingBasket' to='/cart'>
               <FaBasketShopping />
@@ -30,6 +31,7 @@ const NavBar = () => {
             <div className='icon' id='quantity'>
               <span>0</span>
             </div>
+          </div>
           </div>
         <Outlet />
       </>
