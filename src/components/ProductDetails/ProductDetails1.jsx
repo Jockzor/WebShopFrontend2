@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchProductById } from '/src/Services/Api'; 
 import { FaBasketShopping } from "react-icons/fa6";
 import '/src/components/ProductDetails/ProductDetails.css'
 
+import { ShopContext } from '../../components/ShopContext';
+
 const ProductDetails = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
+  const { addToCart } = useContext(ShopContext); 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,6 +35,10 @@ const ProductDetails = () => {
 
   const uploadURL = 'http://localhost:1337';
 
+  const handleOnAddToCart = () => {
+    addToCart({ title, description, price, quantity, image, productId } )
+  }
+
   return (
     <div className="detailsContainer">
         <div className='left'>
@@ -42,7 +49,7 @@ const ProductDetails = () => {
             <p>{description}</p>
             <p>Pris: SEK {price}</p>
             <p>Lager: {quantity}</p>
-            <button className='addToCartBtn'><FaBasketShopping /> Lägg till</button>
+            <button onClick={handleOnAddToCart} className='addToCartBtn'><FaBasketShopping /> Lägg till</button>
         </div>
     </div>
   );

@@ -43,5 +43,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    
+  }
+
+  .product-card-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }

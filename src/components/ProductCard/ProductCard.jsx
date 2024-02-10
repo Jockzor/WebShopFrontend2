@@ -1,17 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '/src/components/ProductCard/ProductCard.css'
+import { FaBasketShopping } from "react-icons/fa6";
 
-const ProductCard = ({ id, title, image, description, price, quantity }) => {
+const ProductCard = ({ productId, title, image, description, price, quantity, addToCart }) => {
   return (
     <div className="product-card">
-      
       <img src={image} alt={title} /> 
       <h3>{title}</h3>
       <p className="description">{description}</p>
       <p>Pris: SEK {price}</p>
       <p>Lager: {quantity}</p>
-      <Link className='detailLink' to={`/product/${id}`}>Se Detaljer</Link>
+      <div className="product-card-buttons">
+        <Link className='detailLink' to={`/product/${productId}`}>Se Detaljer</Link>
+        <button className='detailLink' onClick={addToCart}><FaBasketShopping /> Lägg till</button>
+      </div>
     </div>
   );
 };

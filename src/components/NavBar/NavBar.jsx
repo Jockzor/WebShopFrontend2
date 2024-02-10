@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from "react";
+import { ShopContext } from "../../components/ShopContext";
 import "/src/components/NavBar/NavBar.css"
 import { Outlet, Link } from "react-router-dom";
 import { FaBasketShopping } from "react-icons/fa6";
 
-
 const NavBar = () => {
+  const { cartItems } = useContext(ShopContext);
+
     return(
         <>
         <div className='header-desktop'>
@@ -29,7 +31,7 @@ const NavBar = () => {
             </Link>
             </div>
             <div className='icon' id='quantity'>
-              <span>0</span>
+              <span>{cartItems.length}</span>
             </div>
           </div>
           </div>
