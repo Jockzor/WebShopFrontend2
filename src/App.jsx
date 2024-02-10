@@ -7,40 +7,35 @@ import Returns from "./pages/ReturnsPage/Returns.jsx"
 import { Cart } from './pages/Cart/Cart.jsx';
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Delivery from "./pages/DeliveryPage/Delivery.jsx"
-import Jackets from './pages/Categories/Jackets';
-import Hoodies from './pages/Categories/Hoodies';
-import TShirts from './pages/Categories/Tshirts';
 import { ShopContextProvider } from './components/ShopContext';
 import PurchaseTerm from './pages/PurchaseTerms/PurchaseTerms.jsx';
 import CategoryPage from '/src/components/CategoryPage/CategoryPage.jsx';
 import ProductDetails1 from './components/ProductDetails/ProductDetails1.jsx';
 
 function App() {
-
-  fetch("").then
-
   return (
-    <BrowserRouter>
-        <NavBar/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/cart" element={<Cart />} /> 
-        <Route path="/returns" element={<Returns />}/>
-        <Route path="/delivery" element={<Delivery />}/>
-        <Route path="/purchase" element={<PurchaseTerm />}/>
-        <Route path="/jackets" element={<CategoryPage categoryId="1" />} />
-        <Route path="/hoodies" element={<CategoryPage categoryId="2" />} />
-        <Route path="/tshirts" element={<CategoryPage categoryId="3" />} />
-        <Route path="/product/:productId" element={<ProductDetails1/>} />
-      
-      </Routes>
-       <Footer/>
-    </BrowserRouter>
-      
+    <ShopContextProvider>
+      <BrowserRouter>
+        <NavBar/> 
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/cart" element={<Cart />} /> 
+          <Route path="/returns" element={<Returns />}/>
+          <Route path="/delivery" element={<Delivery />}/>
+          <Route path="/purchase" element={<PurchaseTerm />}/>
+        
+          <Route path="/jackets" element={<CategoryPage categoryId="1" />} />
+          <Route path="/hoodies" element={<CategoryPage categoryId="2" />} />
+          <Route path="/tshirts" element={<CategoryPage categoryId="3" />} />
+          <Route path="/product/:productId" element={<ProductDetails1/>} />
+
+          <Route/>
+        </Routes>
+        <Footer/>
+      </BrowserRouter>
+   </ShopContextProvider>
   )
 }
-
-
 
 export default App;
