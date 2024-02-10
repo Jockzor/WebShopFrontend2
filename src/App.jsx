@@ -20,9 +20,8 @@ function App() {
   fetch("").then
 
   return (
-    //<ShopContextProvider>
     <BrowserRouter>
-        <NavBar/> 
+        <NavBar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
@@ -30,20 +29,14 @@ function App() {
         <Route path="/returns" element={<Returns />}/>
         <Route path="/delivery" element={<Delivery />}/>
         <Route path="/purchase" element={<PurchaseTerm />}/>
-      
         <Route path="/jackets" element={<CategoryPage categoryId="1" />} />
         <Route path="/hoodies" element={<CategoryPage categoryId="2" />} />
         <Route path="/tshirts" element={<CategoryPage categoryId="3" />} />
         <Route path="/product/:productId" element={<ProductDetails1/>} />
-
-        
-        <Route/>
+      
       </Routes>
-      
-      
        <Footer/>
     </BrowserRouter>
-   // </ShopContextProvider>
       
   )
 }

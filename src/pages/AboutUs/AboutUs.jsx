@@ -10,17 +10,19 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h1`
+  margin-top: 25px;
   text-align: center;
-  color: dodgerblue;
-  font-size: 32px;
+  color: black;
+  font-size: 42px;
   text-decoration: underline;
   margin-bottom: 20px;
 `;
 
 const DescriptionBox = styled.div`
-  background-color: gray;
+  background-color: white;
   padding: 20px;
   border-radius: 10px;
+  margin-bottom: 20px;
   
 `;
 
@@ -28,16 +30,21 @@ const Description = styled.h3`
   color:
   font-size: 18px;
   line-height: 1.6;
+  padding: 20px;
 `;
 
 const AboutUs = () => {
   return (
     <div>
-      <Title>Välkommen till Myrorna 2.0 - Din Destinationsbutik för Stil och Hållbarhet!</Title>
+      <Title>Fakta om oss.</Title>
       <Wrapper>
         <DescriptionBox>
           <Description>
-            Myrorna 2.0 är inte bara en klädbutik, det är en upplevelse och en resa genom mode och hållbarhet. Grundat med passionen att förändra synen på second-hand shopping och erbjuda unika, trendiga plagg med ett miljövänligt fokus, har Myrorna 2.0 blivit det självklara valet för alla modeentusiaster med en hjärna för hållbarhet.
+Myrorna 2.0 är en e-handelsplattform specialiserad på kläder och mode, skapad av Joacim och Niklas. <br /> Genom att kombinera deras expertis inom mjukvaruutveckling och modeindustrin har de skapat en innovativ butik som erbjuder användare ett brett utbud av kläder och accessoarer tillgängliga för köp online. <br />
+
+Med fokus på att erbjuda en sömlös och bekväm shoppingupplevelse strävar Myrorna 2.0 efter att leverera högkvalitativa produkter till sina kunder samtidigt som de upprätthåller en användarvänlig och intuitiv plattform. <br /> Genom att erbjuda olika kategorier, storlekar och stilar av kläder och accessoarer, syftar Myrorna 2.0 till att tillgodose olika smaker och preferenser.
+
+Med sitt engagemang för kundnöjdhet och ständig innovation strävar Joacim och Niklas efter att göra Myrorna 2.0 till den främsta destinationen för alla som söker högkvalitativa kläder och modeartiklar online.
           </Description>
         </DescriptionBox>
       </Wrapper>
