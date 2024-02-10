@@ -1,9 +1,42 @@
+.cartItem{
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+
+}
+
+
+
 .countHandler {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  
 
   input {
     text-align: center;
+    width: 20%;
+    min-width: 21px;
   }
+}
+
+.removeBtn{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    bottom: 10px;
+    right: 10px;
+    gap: 2px;
+    &:hover{
+        opacity: .5;
+    }
+}
+
+img{
+    height: 200px;
+    margin-right: 20px;
+    cursor: pointer;
 }

@@ -9,7 +9,7 @@ const ProductCard = ({ productId, title, image, description, price, quantity, ad
       <img src={image} alt={title} /> 
       <h3>{title}</h3>
       <p className="description">{description}</p>
-      <p>Pris: SEK {price}</p>
+      <p>Pris: {price} kr.</p>
       <p>Lager: {quantity}</p>
       <div className="product-card-buttons">
         <Link className='detailLink' to={`/product/${productId}`}>Se Detaljer</Link>

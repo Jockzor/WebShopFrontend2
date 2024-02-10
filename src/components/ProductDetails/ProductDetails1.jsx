@@ -47,7 +47,7 @@ const ProductDetails = () => {
         <div className='detailsRight'>
             <h2>{title}</h2>
             <p>{description}</p>
-            <p>Pris: SEK {price}</p>
+            <p>Pris: {price} kr.</p>
             <p>Lager: {quantity}</p>
             <button onClick={handleOnAddToCart} className='addToCartBtn'><FaBasketShopping /> Lägg till</button>
         </div>
