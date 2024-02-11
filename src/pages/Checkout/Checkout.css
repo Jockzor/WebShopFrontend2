@@ -27,7 +27,7 @@
   gap: '1rem';
 }
 
-input {
+.inputCheckout {
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 3px;

@@ -18,7 +18,7 @@ export const CartItem = (props) => {
     return (
         <div className="cartItem detailsContainer">
             
-         <Link className='detailLink' to={`/product/${productId}`}><img src={uploadURL + image.data.attributes.url} /></Link>
+         <Link className='detailLink' to={`/product/${productId}`}><img className="imgCart" src={uploadURL + image.data.attributes.url} /></Link>
             <div className="description">
                 <p>  
                     <b> {title} </b>
@@ -26,7 +26,7 @@ export const CartItem = (props) => {
                 <p> {price} kr.</p>
                 <div className="countHandler">
                     <button className='addToCartBtn' onClick={() => removeFromCart(productId)}> - </button>
-                    <input value={count} onChange={(e) => updateCartItemCount(Number(e.target.value))}/>
+                    <input className="inputCart" value={count} onChange={(e) => updateCartItemCount(Number(e.target.value))}/>
                     <button className='addToCartBtn' onClick={() => addToCart(props.data[0])}> + </button>
                     <button className="removeBtn" onClick={() => removeFromCart(productId)}>Ta Bort <FaRegTrashAlt/></button>
                 </div>

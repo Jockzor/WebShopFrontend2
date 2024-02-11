@@ -15,7 +15,7 @@
   flex-direction: row;
   
 
-  input {
+  .inputCart {
     text-align: center;
     width: 20%;
     min-width: 21px;
@@ -35,7 +35,7 @@
     }
 }
 
-.img {
+.imgCart {
     height: 200px;
     margin-right: 20px;
     cursor: pointer;

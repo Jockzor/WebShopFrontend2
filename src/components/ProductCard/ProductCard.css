@@ -28,6 +28,7 @@
     display: inline-block;
     background-color: #007bff;
     color: #fff;
+    cursor: pointer;
     padding: 8px 12px;
     border-radius: 5px;
     text-decoration: none;
