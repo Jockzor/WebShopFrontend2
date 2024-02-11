@@ -27,7 +27,7 @@ export const Cart = () => {
       <div className="checkOut">
         <p><b> Totalbelopp: {totalAmount} kr. </b></p>
         <button className='checkOutBtn' onClick={() => navigate("/")}><b> Fortsätt handla </b> </button>
-        <button className='checkOutBtn'><b>Gå Till Kassan</b></button>
+        <button className='checkOutBtn' onClick={() => navigate("/checkout")}><b>Gå Till Kassan</b></button>
       </div>
       <div className='cartItems'>
         {getGroupedcartItemsByProductId.map((product) => {

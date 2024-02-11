@@ -5,6 +5,8 @@ import Footer from './components/Footer/Footer'
 import Home from "./pages/Home/Home";
 import Returns from "./pages/ReturnsPage/Returns.jsx"
 import { Cart } from './pages/Cart/Cart.jsx';
+import { Checkout } from './pages/Checkout/Checkout.jsx';
+import { CompletedOrder } from './pages/CompletedOrder/CompletedOrder.jsx';
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Delivery from "./pages/DeliveryPage/Delivery.jsx"
 import { ShopContextProvider } from './components/ShopContext';
@@ -21,6 +23,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/cart" element={<Cart />} /> 
+          <Route path="/checkout" element={<Checkout />} /> 
+          <Route path="/completed-order" element={<CompletedOrder />} /> 
           <Route path="/returns" element={<Returns />}/>
           <Route path="/delivery" element={<Delivery />}/>
           <Route path="/purchase" element={<PurchaseTerm />}/>
